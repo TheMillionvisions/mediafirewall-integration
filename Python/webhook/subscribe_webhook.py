@@ -1,8 +1,8 @@
 import requests
 
-userID = "mohan12.prakash89@gmail.com"
+userID = "" #provide your userId here 
 webhooks = [
-        "https://webhook-test.com/bcf2fcc633795f6a00371475c3e301ef"
+        "https://example.com/webhook","https://example1.com/webhook"
         ]
 
 url = "https://mediafirewall-ai.millionvisions.ai/notification/webhook"
@@ -15,7 +15,7 @@ body = {
 headers = {'Content-Type': 'application/json'}
 
 params = {
-  'apikey': 'Xi1G9pVWAacYW6hthVCiXBnfSTOHL4Rh'
+  'apikey': '' #provide your apikey here
 }
 
 response = requests.post(url,params=params,json=body ,headers=headers)
