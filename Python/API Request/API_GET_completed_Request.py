@@ -6,7 +6,7 @@ User_ID = "" #provide your userId here
 Video_ID = "" #provide videoId here
 
 
-url = f'https://mediafirewall-ai.millionvisions.ai/mfw/model/config/{User_ID}/{Video_ID}'
+url = 'https://mediafirewall-ai.millionvisions.ai/mfw/model/config/{User_ID}/{Video_ID}'
 params = {
   'apikey': '', #provide your api key here
 }
