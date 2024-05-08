@@ -11,7 +11,8 @@ const body = {
     webhooks: webhooks
 };
 const headers = {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer token'
 };
 const params = new URLSearchParams({ apikey: '' }); // Provide your apikey here
 

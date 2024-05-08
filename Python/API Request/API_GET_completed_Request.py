@@ -2,14 +2,14 @@ import requests
 import time
 
 
-User_ID = "mohan12.prakash89@gmail.com"
-Video_ID = "V2241599357364169_mohan12.prakash89@gmail.com_URL_979"
+User_ID = "" #provide your userId here
+Video_ID = "" #provide videoId here
 
 
 url = f'https://mediafirewall-ai.millionvisions.ai/mfw/model/config/{User_ID}/{Video_ID}'
 
 params = {
-  'apikey': 'Xi1G9pVWAacYW6hthVCiXBnfSTOHL4Rh',
+  'apikey': '', #provide your api key here
 }
 
 response_json = requests.get(url, params=params).json()

@@ -65,14 +65,13 @@ public class WebhookIntegration {
     }
 
 
-    public void sendPostRequest(WebhookConfiguration webhookConfig, String url) {
+    public void sendPostRequest(WebhookConfiguration webhookConfig, String url,String accessToken) {
         // Create RestTemplate instance
         RestTemplate restTemplate = new RestTemplate();
-
         // Set headers
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-
+        headers.set("Authorization", "Bearer " + accessToken);
         // Create request entity with JSON payload and headers
         HttpEntity<WebhookConfiguration> requestEntity = new HttpEntity<>(webhookConfig, headers);
 
@@ -105,6 +104,7 @@ public class WebhookIntegration {
 
         // Send POST request
         WebhookIntegration restClient = new WebhookIntegration();
-        restClient.sendPostRequest(webhookConfig, url);
+        AuthResponse auth = restClient.getAccessToken(userId,apikey);
+        restClient.sendPostRequest(webhookConfig, url,auth.getAccess_token());
     }
 }
